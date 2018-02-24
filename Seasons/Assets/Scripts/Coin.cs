@@ -16,9 +16,9 @@ public class Coin : MonoBehaviour {
 		
 	}
 	//public void OnTrigger
-	public void OnCollisionEnter2D(Collider2D collider)
+	public void OnCollisionEnter2D(Collision2D collision)
 	{
-		if (collider.tag == "Ground") {
+		if (collision.gameObject.tag == "Ground") {
 			rb.constraints = RigidbodyConstraints2D.FreezeAll;
 		}
 

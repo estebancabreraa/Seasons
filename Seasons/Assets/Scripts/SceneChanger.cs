@@ -11,11 +11,12 @@ using UnityEngine.UI;
  * 
  **/
 public class SceneChanger : MonoBehaviour {
-	public Text contadorText;
+	
+	//public Text contadorText;
 
 	// Use this for initialization
 	void Start () {
-		contadorText.text = PlayerPrefs.GetFloat ("Score").ToString(); // para que cambie el texto que aparece en el menu
+		//contadorText.text = PlayerPrefs.GetFloat ("Score").ToString(); // para que cambie el texto que aparece en el menu
 		// por el highscore
 	}
 	
