@@ -219,8 +219,8 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 2ef67b1783c9910f0b5bce9c0cb16391 Assembly-CSharp.dll:.Character
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-4b9570a3d15fa8ad3b9dfb8f631ba1cd Assembly-CSharp.dll:.GameController
-e4a673995eb417639e534126e1c4bf7a Assembly-CSharp.dll:.CoinSpawner
+3a66903ca3c09a2d4dca5fd19ba480d3 Assembly-CSharp.dll:.GameController
+8ae142de86ddb8532d6c980dda514b5f Assembly-CSharp.dll:.CoinSpawner
 b984cea3cfd7933a48a1334c254f1369 Assembly-CSharp.dll:.Banana
 26215f135eeb48d8fa1189498c107f6c Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour
 0561521e336e270e6e5a9c61387cb838 Vuforia.UnityExtensions.dll:Vuforia.AnchorInputListenerBehaviour
@@ -292,3 +292,5 @@ d2a2bd333db22f480a8589e167314ecc Vuforia.UnityExtensions.dll:Vuforia.UserDefined
 3d1b89310e77c34bc0c8d7132231345c Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 15bea26698002c6c4a3087131232ce5c Vuforia.UnityExtensions.dll:Vuforia.WordBehaviour
+f9206c7e4d7fa43b8b48f3d8a39801c1 Assembly-CSharp.dll:.GasolineSpawner
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Helicopter

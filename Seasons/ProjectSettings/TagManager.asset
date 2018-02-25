@@ -8,6 +8,8 @@ TagManager:
   - Points
   - Fireball
   - Ground
+  - Roof
+  - Gasoline
   layers:
   - Default
   - TransparentFX
