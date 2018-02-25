@@ -16,6 +16,8 @@ public class GameController : MonoBehaviour {
 	public int gasInstances; //solamente se puede crear una instancia de gasolina a la vez, esta variable controlara eso
 	public int gasCatches; // indica cuantos botecitos de gasolina se ha recolectado, cuando llegue a 3 pasara a la siguiente escena
 	public bool nextLevel = false;
+	private float flyTime = 0;
+	public string nextscene;
 
 	// Use this for initialization
 	void Start () {
@@ -33,6 +35,12 @@ public class GameController : MonoBehaviour {
 			if (timeOver > 3) {
 				sm.OnStartGame ("Main Menu");
 				timeOver = 0;
+			}
+		} 
+		if (nextLevel == true) {
+			flyTime += Time.deltaTime;
+			if (flyTime > 7f) {
+				sm.OnStartGame (nextscene);
 			}
 		}
 		

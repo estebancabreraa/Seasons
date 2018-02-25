@@ -311,7 +311,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: Jungle
+            m_StringArgument: Woods
             m_BoolArgument: 0
           m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
@@ -592,6 +592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f74dd9302d7a4ecaaeac30221129b2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highscore: {fileID: 534300850}
 --- !u!4 &1069819783
 Transform:
   m_ObjectHideFlags: 0
