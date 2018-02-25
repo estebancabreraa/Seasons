@@ -12,21 +12,25 @@ using UnityEngine.UI;
  **/
 public class SceneChanger : MonoBehaviour {
 	public Text highscore;
+	public Text currentScore;
 	
 	//public Text contadorText;
 
 	// Use this for initialization
 	void Start () {
-		highscore.text = PlayerPrefs.GetFloat ("Score").ToString(); // para que cambie el texto que aparece en el menu
+		highscore.text = PlayerPrefs.GetInt ("Highscore").ToString(); // para que cambie el texto que aparece en el menu
 		// por el highscore
+		currentScore.text = PlayerPrefs.GetInt ("Score").ToString();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
 	}
 	public void OnStartGame(string scene)
 	{
 		SceneManager.LoadScene (scene); //cambio de escenas
+		if (scene == "Jungle") {
+			PlayerPrefs.SetInt ("Score", 0);
+		} 
 	}
 }

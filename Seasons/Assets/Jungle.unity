@@ -2839,7 +2839,7 @@ MonoBehaviour:
   gasInstances: 0
   gasCatches: 0
   nextLevel: 0
-  nextscene: Woods
+  nextscene: Winter
 --- !u!4 &1217097564
 Transform:
   m_ObjectHideFlags: 0
@@ -2864,7 +2864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 934616faf643e4f8f8e5b87fa1fec203, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnTime: 1.5
+  spawnTime: 0.5
   elapsedTime: 0
   banana: {fileID: 114882017463926710, guid: 637a0a6b1cd6b447fb2a79130f8cfcd1, type: 2}
 --- !u!114 &1217097566
@@ -3830,6 +3830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highscore: {fileID: 0}
+  currentScore: {fileID: 541082737}
 --- !u!4 &1944219962
 Transform:
   m_ObjectHideFlags: 0

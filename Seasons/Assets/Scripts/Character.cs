@@ -13,7 +13,6 @@ public class Character : MonoBehaviour {
     private bool facingRight = true;
 	private int livesLeft = 3;
 	public Fireball fireball;
-	private Vector2 offset = new Vector2(0.3f, 0.1f);
 	public GameObject heart1;
 	public GameObject heart2;
 	public GameObject heart3;
@@ -43,15 +42,18 @@ public class Character : MonoBehaviour {
 					if (touch.position.x < Screen.width/2) { //si se presiona en la mitad izquierda de la pantalla, volara
 						rb2d.transform.Translate (new Vector3 (0, 1, 0) * speed * Time.deltaTime);
 					} 
-					else if (fireTime > 0.2) // si se presiona a la dereche, disparara bolas cada 0.2 seg
+					else if (fireTime > 0.1) // si se presiona a la derecha, disparara bolas cada 0.1 seg
 					{
 						Fire ();
 						fireTime = 0;
 					}
-
 				}
 			}
 			anim.SetFloat ("Speed", Mathf.Abs (Input.acceleration.x)); //para que en la animacion cambie la pose del personaje cuando se mueva.
+			if (livesLeft == 2)
+				heart1.SetActive (false);
+			if (livesLeft == 1)
+				heart2.SetActive (false);
 			if (livesLeft == 0) {
 				heart3.SetActive (false);
 				GameController.instance.gameOver = true;
@@ -63,14 +65,20 @@ public class Character : MonoBehaviour {
 	{
 		if (collision.gameObject.tag == "Points") {// cada vez que choque con una moneda (con tag points) se le sumaran puntos
 			GameController.instance.score += 5;
+			PlayerPrefs.SetInt ("Score", GameController.instance.score);
 			GameController.instance.coinInstances--;
 			Destroy (collision.gameObject);
-		}
+		} 
 		else if (collision.gameObject.tag == "Gasoline") {
 			Destroy (collision.gameObject);
 			GameController.instance.gasCatches++;
 			GameController.instance.gasInstances--;
+		} 
+		else if (collision.gameObject.tag == "Deadly") {
+			livesLeft--;
+			transform.position = new Vector3 (0, 0, 0);
 		}
+
 	}
 
     private void OnTriggerEnter2D (Collider2D collision)
@@ -78,16 +86,14 @@ public class Character : MonoBehaviour {
 		if (collision.tag == "Deadly") { // cada vez que choque con una banana (con tag deadly) se le restara una vida y se mostrara en 
 			//pantalla
 			livesLeft--;
-			if (livesLeft == 2)
-				heart1.SetActive (false);
-			if (livesLeft == 1)
-				heart2.SetActive (false);
 			Destroy (collision.gameObject);
+			transform.position = new Vector3 (0, 0, 0);
 		} 
 
 	}
 	public void Fire()
 	{
+		Vector2 offset = new Vector2(0.3f, 0.1f);
 		// Para que el personaje dispare bolas de fuego
 		if (sr.flipX == true) {
 			fireball.direction = "negative";
