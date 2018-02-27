@@ -1120,7 +1120,7 @@ MonoBehaviour:
   gasInstances: 0
   gasCatches: 0
   nextLevel: 0
-  nextscene: Main Menu
+  nextscene: City
 --- !u!4 &1027702368
 Transform:
   m_ObjectHideFlags: 0
