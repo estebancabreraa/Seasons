@@ -22,6 +22,7 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		PlayerPrefs.SetInt ("Highscore", 0);
 		instance = this;
 		GO.gameObject.SetActive (false);
 		Pointstxt.text = PlayerPrefs.GetInt ("Score").ToString (); // para que muestre en pantalla el score actual

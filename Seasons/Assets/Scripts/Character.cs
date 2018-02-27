@@ -41,6 +41,7 @@ public class Character : MonoBehaviour {
 				foreach (Touch touch in Input.touches) { //ya que pueden haber multiples touches sucediendo simultaneamente
 					if (touch.position.x < Screen.width/2) { //si se presiona en la mitad izquierda de la pantalla, volara
 						rb2d.transform.Translate (new Vector3 (0, 1, 0) * speed * Time.deltaTime);
+						anim.SetBool ("isOnGround", false);
 					} 
 					else if (fireTime > 0.1) // si se presiona a la derecha, disparara bolas cada 0.1 seg
 					{
@@ -68,17 +69,22 @@ public class Character : MonoBehaviour {
 			PlayerPrefs.SetInt ("Score", GameController.instance.score);
 			GameController.instance.coinInstances--;
 			Destroy (collision.gameObject);
-		} 
-		else if (collision.gameObject.tag == "Gasoline") {
+		} else if (collision.gameObject.tag == "Gasoline") {
 			Destroy (collision.gameObject);
 			GameController.instance.gasCatches++;
 			GameController.instance.gasInstances--;
-		} 
-		else if (collision.gameObject.tag == "Deadly") {
+		} else if (collision.gameObject.tag == "Deadly") {
 			livesLeft--;
 			transform.position = new Vector3 (0, 0, 0);
+		} else if (collision.gameObject.tag == "Ground" && (anim.GetFloat ("Speed") > 0)) {
+			anim.SetBool ("isOnGround", true);
 		}
-
+	}
+	private void OnCollisionExit2D(Collision2D collision)
+	{
+		if (collision.gameObject.tag == "Ground") {
+			anim.SetBool ("isOnGround", false);
+		}
 	}
 
     private void OnTriggerEnter2D (Collider2D collision)
@@ -93,6 +99,7 @@ public class Character : MonoBehaviour {
 	}
 	public void Fire()
 	{
+		anim.SetBool ("isFiring", true);
 		Vector2 offset = new Vector2(0.3f, 0.1f);
 		// Para que el personaje dispare bolas de fuego
 		if (sr.flipX == true) {
@@ -102,5 +109,6 @@ public class Character : MonoBehaviour {
 			fireball.direction = "positive";
 		}
 		Instantiate (fireball, (Vector2)transform.position + offset * transform.localScale.x, Quaternion.identity);
+		anim.SetBool ("isFiring", false);
 	}
 }

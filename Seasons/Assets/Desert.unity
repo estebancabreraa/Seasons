@@ -2164,7 +2164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnTime: 0.5
   elapsedTime: 0
-  banana: {fileID: 114882017463926710, guid: 637a0a6b1cd6b447fb2a79130f8cfcd1, type: 2}
+  banana: {fileID: 114820268426043442, guid: ecb0ffe7578c54b1f86afb35b94d7f1c, type: 2}
 --- !u!114 &1012803187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2609,7 +2609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c78da4cf54814ad3a96c125ffabcd57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  cam: {fileID: 485829332}
   fireball: {fileID: 114934735549154938, guid: df1a62dca467a4a36b9671162ca2f1a2, type: 2}
   heart1: {fileID: 1363961806}
   heart2: {fileID: 1264545136}
@@ -2646,18 +2646,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.029905215, y: -0.10990381}
+  m_Offset: {x: 0.22806382, y: -0.10990471}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.8, y: 1.1}
-    newSize: {x: 0.8, y: 1.1}
+    oldSize: {x: 3.36, y: 2.65}
+    newSize: {x: 3.36, y: 2.65}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.62056875, y: 0.8801923}
+  m_Size: {x: 2.4889278, y: 2.3143563}
   m_EdgeRadius: 0
 --- !u!95 &1405299361
 Animator:
@@ -2710,12 +2710,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cf0a39b99d6624aaf87ab80f09126d4b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 934f8b7396c55490cb6b59e27e7290d7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.8, y: 1.1}
+  m_Size: {x: 3.36, y: 2.65}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2727,8 +2727,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1405299357}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.13, y: -0.29, z: -1}
-  m_LocalScale: {x: 1.0743823, y: 1.1127276, z: 1}
+  m_LocalPosition: {x: -0.4, y: 1.1, z: -1}
+  m_LocalScale: {x: 0.5331548, y: 0.5472348, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4

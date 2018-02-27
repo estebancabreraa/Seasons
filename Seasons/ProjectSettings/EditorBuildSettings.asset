@@ -14,3 +14,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Jungle.unity
     guid: 92e869a2619c04a9bb69c91b82fca074
+  - enabled: 1
+    path: Assets/Beach.unity
+    guid: 3f69eba7045cc7342b36257dcf29fc8b
+  - enabled: 1
+    path: Assets/City.unity
+    guid: 66fdcfd1eadb2164a83916f407a9710c
+  - enabled: 1
+    path: Assets/Winter.unity
+    guid: 68c7c3ba2287847968475dad300a4a6e
+  - enabled: 1
+    path: Assets/Woods.unity
+    guid: 347e7d73c9c344c1494129419a130619
+  - enabled: 1
+    path: Assets/Desert.unity
+    guid: 8a1ad57a735814309bc6797609f24f90
