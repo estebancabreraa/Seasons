@@ -292,6 +292,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\ataqueTorre.cs" />
+    <Compile Include="Assets\Scripts\BackgroundMusic.cs" />
     <Compile Include="Assets\Scripts\Banana.cs" />
     <Compile Include="Assets\Scripts\BananaSpawner.cs" />
     <Compile Include="Assets\Scripts\Character.cs" />
