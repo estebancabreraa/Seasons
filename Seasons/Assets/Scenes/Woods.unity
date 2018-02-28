@@ -166,7 +166,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f673cc983c2d840d788189678f0c7633, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 96ee3e5732ca74dd5beb7be1deda1eb0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -661,7 +661,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c78da4cf54814ad3a96c125ffabcd57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 965329896}
   fireball: {fileID: 114934735549154938, guid: df1a62dca467a4a36b9671162ca2f1a2, type: 2}
   heart1: {fileID: 884123051}
   heart2: {fileID: 268001846}
@@ -1054,6 +1053,9 @@ GameObject:
   - component: {fileID: 1027702366}
   - component: {fileID: 1027702365}
   - component: {fileID: 1027702364}
+  - component: {fileID: 1027702371}
+  - component: {fileID: 1027702370}
+  - component: {fileID: 1027702369}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -1084,6 +1086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 269dd6bd43c434fdd83570c42f58d4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnTime: 10
   coin: {fileID: 1173029252213588, guid: bda84fbdecc944c54b69ae44833597b7, type: 2}
 --- !u!114 &1027702366
 MonoBehaviour:
@@ -1111,11 +1114,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOver: 0
+  winner: 0
   score: 0
   sm: {fileID: 446867199}
   Pointstxt: {fileID: 1865517379}
   GO: {fileID: 318534805}
   gasCounter: {fileID: 1727038298}
+  winnerTxt: {fileID: 0}
   coinInstances: 0
   gasInstances: 0
   gasCatches: 0
@@ -1134,6 +1139,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1027702369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1027702363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269dd6bd43c434fdd83570c42f58d4b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnTime: 20
+  coin: {fileID: 1581304460073684, guid: 1d352154e54394361a2173db842cf258, type: 2}
+--- !u!114 &1027702370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1027702363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269dd6bd43c434fdd83570c42f58d4b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnTime: 7
+  coin: {fileID: 1253928249283112, guid: 19c1f6518d31a4af8b3f2f9ae760d66d, type: 2}
+--- !u!114 &1027702371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1027702363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269dd6bd43c434fdd83570c42f58d4b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnTime: 15
+  coin: {fileID: 1388518404139384, guid: d34a2171b2afb4c5ea8293a435f59f79, type: 2}
 --- !u!1 &1103539718
 GameObject:
   m_ObjectHideFlags: 0

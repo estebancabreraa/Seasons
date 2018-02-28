@@ -524,6 +524,7 @@ GameObject:
   - component: {fileID: 427081048}
   - component: {fileID: 427081047}
   - component: {fileID: 427081050}
+  - component: {fileID: 427081051}
   m_Layer: 0
   m_Name: Helicopter
   m_TagString: Untagged
@@ -616,6 +617,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb83f611a53f24f39b17bf4e3a7ce69c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &427081051
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 427081046}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.23, y: 1.5}
+    newSize: {x: 4.23, y: 1.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.23, y: 1.5}
+  m_EdgeRadius: 0
 --- !u!1 &446461387
 GameObject:
   m_ObjectHideFlags: 0
@@ -2737,6 +2763,10 @@ GameObject:
   - component: {fileID: 1217097563}
   - component: {fileID: 1217097565}
   - component: {fileID: 1217097566}
+  - component: {fileID: 1217097567}
+  - component: {fileID: 1217097570}
+  - component: {fileID: 1217097569}
+  - component: {fileID: 1217097568}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -2767,7 +2797,7 @@ MonoBehaviour:
   gasInstances: 0
   gasCatches: 0
   nextLevel: 0
-  nextscene: Beach
+  nextscene: Lava
 --- !u!4 &1217097564
 Transform:
   m_ObjectHideFlags: 0
@@ -2806,7 +2836,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 269dd6bd43c434fdd83570c42f58d4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnTime: 10
   coin: {fileID: 1173029252213588, guid: bda84fbdecc944c54b69ae44833597b7, type: 2}
+--- !u!114 &1217097567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1217097562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd905e03490b34bbfadb3a572ddb8be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gas: {fileID: 1544515587794160, guid: 6dbae4a55f8e4466cb7efb8fec945b95, type: 2}
+--- !u!114 &1217097568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1217097562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269dd6bd43c434fdd83570c42f58d4b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnTime: 25
+  coin: {fileID: 1581304460073684, guid: 1d352154e54394361a2173db842cf258, type: 2}
+--- !u!114 &1217097569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1217097562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269dd6bd43c434fdd83570c42f58d4b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnTime: 20
+  coin: {fileID: 1253928249283112, guid: 19c1f6518d31a4af8b3f2f9ae760d66d, type: 2}
+--- !u!114 &1217097570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1217097562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269dd6bd43c434fdd83570c42f58d4b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnTime: 15
+  coin: {fileID: 1388518404139384, guid: d34a2171b2afb4c5ea8293a435f59f79, type: 2}
 --- !u!1 &1292284795
 GameObject:
   m_ObjectHideFlags: 0
@@ -3000,7 +3082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.38047957, g: 0.062283736, b: 0.4705882, a: 1}
+  m_Color: {r: 0.12018816, g: 0.8602941, b: 0.82966894, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

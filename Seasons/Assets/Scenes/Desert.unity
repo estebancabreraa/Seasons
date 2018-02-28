@@ -2120,6 +2120,9 @@ GameObject:
   - component: {fileID: 1012803186}
   - component: {fileID: 1012803185}
   - component: {fileID: 1012803184}
+  - component: {fileID: 1012803191}
+  - component: {fileID: 1012803190}
+  - component: {fileID: 1012803189}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -2150,6 +2153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 269dd6bd43c434fdd83570c42f58d4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnTime: 10
   coin: {fileID: 1173029252213588, guid: bda84fbdecc944c54b69ae44833597b7, type: 2}
 --- !u!114 &1012803186
 MonoBehaviour:
@@ -2177,11 +2181,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOver: 0
+  winner: 0
   score: 0
   sm: {fileID: 605164230}
   Pointstxt: {fileID: 142331957}
   GO: {fileID: 494134428}
   gasCounter: {fileID: 1759012865}
+  winnerTxt: {fileID: 0}
   coinInstances: 0
   gasInstances: 0
   gasCatches: 0
@@ -2200,6 +2206,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1012803189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1012803183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269dd6bd43c434fdd83570c42f58d4b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnTime: 25
+  coin: {fileID: 1581304460073684, guid: 1d352154e54394361a2173db842cf258, type: 2}
+--- !u!114 &1012803190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1012803183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269dd6bd43c434fdd83570c42f58d4b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnTime: 20
+  coin: {fileID: 1253928249283112, guid: 19c1f6518d31a4af8b3f2f9ae760d66d, type: 2}
+--- !u!114 &1012803191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1012803183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269dd6bd43c434fdd83570c42f58d4b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnTime: 15
+  coin: {fileID: 1388518404139384, guid: d34a2171b2afb4c5ea8293a435f59f79, type: 2}
 --- !u!1 &1016511916
 GameObject:
   m_ObjectHideFlags: 0
@@ -2609,7 +2654,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c78da4cf54814ad3a96c125ffabcd57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 485829332}
   fireball: {fileID: 114934735549154938, guid: df1a62dca467a4a36b9671162ca2f1a2, type: 2}
   heart1: {fileID: 1363961806}
   heart2: {fileID: 1264545136}
