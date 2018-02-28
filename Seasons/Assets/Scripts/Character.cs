@@ -8,7 +8,6 @@ public class Character : MonoBehaviour {
     Rigidbody2D rb2d;
     SpriteRenderer sr;
 	Animator anim;
-    public Camera cam;
     private float speed = 12f;
     private bool facingRight = true;
 	private int livesLeft = 3;
@@ -17,18 +16,16 @@ public class Character : MonoBehaviour {
 	public GameObject heart2;
 	public GameObject heart3;
 	private float fireTime =0;
-
 	// Use this for initialization
 	void Start () {
         rb2d = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-        cam.transform.position = new Vector3(rb2d.transform.position.x, cam.transform.position.y, cam.transform.position.z);
 		anim = GetComponent<Animator> ();
     }
 	
 	// Update is called once per frame
 	void Update () {
-		if (GameController.instance.gameOver == false && (GameController.instance.nextLevel == false)) {
+		if (GameController.instance.gameOver == false && (GameController.instance.nextLevel == false) && (GameController.instance.winner == false)) {
 			float move = Input.acceleration.x;
 			if (move != 0) {
 				rb2d.transform.Translate (new Vector3 (1, 0, 0) * move * speed * Time.deltaTime);
@@ -57,8 +54,9 @@ public class Character : MonoBehaviour {
 				heart2.SetActive (false);
 			if (livesLeft == 0) {
 				heart3.SetActive (false);
+				anim.SetBool ("isDead", true);
+				rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
 				GameController.instance.gameOver = true;
-				this.gameObject.SetActive (false);
 			}
 		}
 	}
@@ -78,6 +76,14 @@ public class Character : MonoBehaviour {
 			transform.position = new Vector3 (0, 0, 0);
 		} else if (collision.gameObject.tag == "Ground" && (anim.GetFloat ("Speed") > 0)) {
 			anim.SetBool ("isOnGround", true);
+		} else if ((collision.gameObject.tag == "Flag") && (GameController.instance.gasCatches == 3)) {
+			this.gameObject.SetActive (false);
+			GameController.instance.winner = true;
+		} else if (collision.gameObject.tag == "ExtraPoints") {
+			GameController.instance.score += 25;
+			PlayerPrefs.SetInt ("Score", GameController.instance.score);
+			GameController.instance.coinInstances--;
+			Destroy (collision.gameObject);
 		}
 	}
 	private void OnCollisionExit2D(Collision2D collision)
@@ -93,7 +99,8 @@ public class Character : MonoBehaviour {
 			//pantalla
 			livesLeft--;
 			Destroy (collision.gameObject);
-			transform.position = new Vector3 (0, 0, 0);
+			if (livesLeft != 0)
+				transform.position = new Vector3 (0, 0, 0);
 		} 
 
 	}

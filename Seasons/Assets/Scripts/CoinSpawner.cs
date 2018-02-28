@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CoinSpawner : MonoBehaviour {
 	
-	private float spawnTime = 10f;
+	public float spawnTime = 10f;
 	private float elapsedTime = 0f;
 	public GameObject coin;
 
@@ -15,7 +15,7 @@ public class CoinSpawner : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (GameController.instance.gameOver == false && (GameController.instance.nextLevel == false)) {
+		if (GameController.instance.gameOver == false && (GameController.instance.nextLevel == false) && (GameController.instance.winner == false)) {
 
 			if (elapsedTime < spawnTime) {
 				elapsedTime += Time.deltaTime;

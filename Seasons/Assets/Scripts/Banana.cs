@@ -15,7 +15,7 @@ public class Banana : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (GameController.instance.gameOver == false && (GameController.instance.nextLevel == false)) {
+		if (GameController.instance.gameOver == false && (GameController.instance.nextLevel == false) && (GameController.instance.winner == false)) {
 			if (isRight == true) {
 
 				transform.Rotate (0, 0, rotSpeed);
@@ -24,7 +24,7 @@ public class Banana : MonoBehaviour {
 				transform.Rotate (0, 0, rotSpeed);
 				transform.position += Vector3.left * speed * Time.deltaTime;
 			}
-			Destroy (this, 5f);
+			Destroy (this.gameObject, 5f);
 		}
 		
 	}
