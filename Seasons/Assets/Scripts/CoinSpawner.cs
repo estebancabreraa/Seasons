@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CoinSpawner : MonoBehaviour {
 	
-	private float spawnTime = 10f;
+	public float spawnTime = 10f;
 	private float elapsedTime = 0f;
 	public GameObject coin;
 

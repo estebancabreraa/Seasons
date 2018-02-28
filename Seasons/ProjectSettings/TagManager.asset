@@ -11,6 +11,7 @@ TagManager:
   - Roof
   - Gasoline
   - Flag
+  - ExtraPoints
   layers:
   - Default
   - TransparentFX

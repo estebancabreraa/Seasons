@@ -76,11 +76,15 @@ public class Character : MonoBehaviour {
 			transform.position = new Vector3 (0, 0, 0);
 		} else if (collision.gameObject.tag == "Ground" && (anim.GetFloat ("Speed") > 0)) {
 			anim.SetBool ("isOnGround", true);
-		}
-		else if ((collision.gameObject.tag == "Flag") && (GameController.instance.gasCatches == 3)) {
+		} else if ((collision.gameObject.tag == "Flag") && (GameController.instance.gasCatches == 3)) {
 			this.gameObject.SetActive (false);
 			GameController.instance.winner = true;
-		} 
+		} else if (collision.gameObject.tag == "ExtraPoints") {
+			GameController.instance.score += 25;
+			PlayerPrefs.SetInt ("Score", GameController.instance.score);
+			GameController.instance.coinInstances--;
+			Destroy (collision.gameObject);
+		}
 	}
 	private void OnCollisionExit2D(Collision2D collision)
 	{
