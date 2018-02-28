@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Beach.unity
+=======
+- path: Assets/Lava.unity
+>>>>>>> 790bf53babdfa333edf569092dcf136b874012fe
   isLoaded: 1
   isActive: 1
