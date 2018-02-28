@@ -51,17 +51,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\ataqueTorre.cs" />
+     <Compile Include="Assets\Scripts\BackgroundMusic.cs" />
      <Compile Include="Assets\Scripts\Banana.cs" />
      <Compile Include="Assets\Scripts\BananaSpawner.cs" />
      <Compile Include="Assets\Scripts\Character.cs" />
      <Compile Include="Assets\Scripts\Coin.cs" />
      <Compile Include="Assets\Scripts\CoinSpawner.cs" />
      <Compile Include="Assets\Scripts\Fireball.cs" />
+     <Compile Include="Assets\Scripts\Flag.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\GasolineSpawner.cs" />
      <Compile Include="Assets\Scripts\Helicopter.cs" />
-     <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\SceneChanger.cs" />
      <None Include="Assets\Sprites\Jungle\jungle tileset\jungle tileset.png.txt" />
      <None Include="Assets\Sprites\HUD\hud_spritesheet.xml" />

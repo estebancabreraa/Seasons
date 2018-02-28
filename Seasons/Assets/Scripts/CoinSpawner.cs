@@ -15,7 +15,7 @@ public class CoinSpawner : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (GameController.instance.gameOver == false && (GameController.instance.nextLevel == false)) {
+		if (GameController.instance.gameOver == false && (GameController.instance.nextLevel == false) && (GameController.instance.winner == false)) {
 
 			if (elapsedTime < spawnTime) {
 				elapsedTime += Time.deltaTime;
