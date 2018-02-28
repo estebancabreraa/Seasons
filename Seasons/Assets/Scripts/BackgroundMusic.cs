@@ -5,7 +5,6 @@ using UnityEngine;
 public class BackgroundMusic : MonoBehaviour {
 
     public AudioSource fxSound; // Emitir sons
-    public AudioClip backMusic; // Som de fundo
 
     private void Start()
     {
@@ -13,20 +12,21 @@ public class BackgroundMusic : MonoBehaviour {
         DontDestroyOnLoad(fxSound);
 
     }
-    // Use this for initialization
-    void playMusic()
-    {
 
-        // Audio Source responsavel por emitir os sons
-       
-        fxSound.Play();
-        
-    }
+	// Use this for initialization
+	void playMusic()
+	{
 
-    // Update is called once per frame
-    private void Update()
-    {
-        playMusic();
-        DontDestroyOnLoad(fxSound);
-    }
+		// Audio Source responsavel por emitir os sons
+
+		fxSound.Play();
+
+	}
+
+	// Update is called once per frame
+	private void Update()
+	{
+		playMusic();
+		DontDestroyOnLoad(fxSound);
+	}
 }

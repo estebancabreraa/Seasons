@@ -33,4 +33,8 @@ public class SceneChanger : MonoBehaviour {
 			PlayerPrefs.SetInt ("Score", 0);
 		} 
 	}
+	public void Pause()
+	{
+		
+	}
 }

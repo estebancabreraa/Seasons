@@ -23,21 +23,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Jungle.unity
     guid: 7040754789c3e49959e9ab6070bc70f5
-  - enabled: 1
-    path: Assets/Scenes/Beach.unity
-    guid: bc1f5400eec044ba293fbe532b4eb2a9
   - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/f1d865bbf416d45528dcadbc6dc66527
-    guid: f1d865bbf416d45528dcadbc6dc66527
-  - enabled: 1
-    path: Assets/Scenes/Desert.unity
-    guid: f2d70bbb45cd94bc2b143cc27c4491f8
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Winter.unity
     guid: 43936923b970145ce8c2a66d8cd49db6
   - enabled: 1
     path: Assets/Scenes/Woods.unity
     guid: 5ac162816a2d24eab8d0761007b6f3a2
+  - enabled: 1
+    path: Assets/Scenes/Desert.unity
+    guid: f2d70bbb45cd94bc2b143cc27c4491f8
   - enabled: 1
     path: Assets/Scenes/City.unity
     guid: 66fdcfd1eadb2164a83916f407a9710c
@@ -53,3 +50,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lava.unity
     guid: 65c03333421e54e4f8598fd4b44c91e1
+  - enabled: 1
+    path: Assets/Scenes/Beach.unity
+    guid: bc1f5400eec044ba293fbe532b4eb2a9

@@ -12,6 +12,7 @@ TagManager:
   - Gasoline
   - Flag
   - ExtraPoints
+  - Music
   layers:
   - Default
   - TransparentFX
