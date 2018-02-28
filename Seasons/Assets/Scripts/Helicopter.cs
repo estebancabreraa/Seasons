@@ -1,7 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/** 
+ * Esta clase sirve para darle animaciones al helicóptero, y que solo pueda salir volando hacia el siguiente nivel cuando ya se tenga 
+ * los 3 tambos de gasolina. 
+ * 
+ * @author Ana Lucia Hernandez (17138). Esteban Cabrera (17781)
+ * 
+ **/
 public class Helicopter : MonoBehaviour {
 	Rigidbody2D rb;
 	Animator anim;

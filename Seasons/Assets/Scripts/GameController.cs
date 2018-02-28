@@ -4,6 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SocialPlatforms.Impl;
 
+/** 
+ * Clase para controlar instancias. 
+ * 
+ * @author Ana Lucia Hernandez (17138). Esteban Cabrera (17781)
+ * 
+ **/
 public class GameController : MonoBehaviour {
 	public bool gameOver = false;
 	public bool winner = false;
@@ -43,12 +49,12 @@ public class GameController : MonoBehaviour {
 				PlayerPrefs.SetInt ("Highscore", score); //en el caso que el score actual sea mayor que el highscore guardado
 			}
 			if (timeOver > 3) {
-				sm.OnStartGame ("Main Menu");
+				sm.OnStartGame ("Main Menu");// regresa al menú principal
 				sm.highscore.text = PlayerPrefs.GetInt ("Highscore").ToString (); // para que cambie el texto que aparece en el menu
 				// que se guarde el actual como el highscore
 				timeOver = 0;
 			}
-			PlayerPrefs.SetInt ("Score", 0);
+			PlayerPrefs.SetInt ("Score", 0); //se setea el score a 0. 
 		} else if (nextLevel == true) {
 			flyTime += Time.deltaTime;
 			int currentHighScore = PlayerPrefs.GetInt ("Highscore");
@@ -61,11 +67,11 @@ public class GameController : MonoBehaviour {
 				PlayerPrefs.SetInt ("Score", score);
 			}
 		} else if (winner == true) {
-			winnerTxt.gameObject.SetActive (true);
+			winnerTxt.gameObject.SetActive (true); //activar el texto que anuncia que el jugador ha ganado. 
 			timeOver += Time.deltaTime;
 			if (timeOver > 3) {
 				score += 1000;
-				PlayerPrefs.SetInt ("Score", score);
+				PlayerPrefs.SetInt ("Score", score); // cuando se agreguen puntos, que tambien se guarden en el playerprefs
 				sm.OnStartGame ("Main Menu");
 				sm.highscore.text = PlayerPrefs.GetInt ("Highscore").ToString (); // para que cambie el texto que aparece en el menu
 				// que se guarde el actual como el highscore

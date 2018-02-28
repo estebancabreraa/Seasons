@@ -5,14 +5,14 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 /** 
- * Esta sera la clase utilizada para cambiar entre el menú principal y la escena de la nave espacial 
+ * Esta sera la clase utilizada para cambiar entre el menú principal y las demás escenas
  * 
  * @author Ana Lucia Hernandez (17138). Esteban Cabrera (17781)
  * 
  **/
 public class SceneChanger : MonoBehaviour {
-	public Text highscore;
-	public Text currentScore;
+	public Text highscore; //cuenta de el puntaje más alto de todas las jugadas. 
+	public Text currentScore; //cuenta del puntaje de la jugada actual
 	
 	//public Text contadorText;
 
@@ -30,11 +30,7 @@ public class SceneChanger : MonoBehaviour {
 	{
 		SceneManager.LoadScene (scene); //cambio de escenas
 		if (scene == "Jungle") {
-			PlayerPrefs.SetInt ("Score", 0);
+			PlayerPrefs.SetInt ("Score", 0); //cuando el juego inicie, también se reinicia el puntaje de la jugada actual
 		} 
-	}
-	public void Pause()
-	{
-		
 	}
 }

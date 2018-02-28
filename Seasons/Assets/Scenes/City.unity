@@ -2880,6 +2880,10 @@ GameObject:
   - component: {fileID: 1217097563}
   - component: {fileID: 1217097565}
   - component: {fileID: 1217097566}
+  - component: {fileID: 1217097567}
+  - component: {fileID: 1217097570}
+  - component: {fileID: 1217097569}
+  - component: {fileID: 1217097568}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -2951,6 +2955,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnTime: 10
   coin: {fileID: 1173029252213588, guid: bda84fbdecc944c54b69ae44833597b7, type: 2}
+--- !u!114 &1217097567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1217097562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd905e03490b34bbfadb3a572ddb8be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gas: {fileID: 1544515587794160, guid: 6dbae4a55f8e4466cb7efb8fec945b95, type: 2}
+--- !u!114 &1217097568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1217097562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269dd6bd43c434fdd83570c42f58d4b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnTime: 25
+  coin: {fileID: 1388518404139384, guid: d34a2171b2afb4c5ea8293a435f59f79, type: 2}
+--- !u!114 &1217097569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1217097562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269dd6bd43c434fdd83570c42f58d4b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnTime: 30
+  coin: {fileID: 1253928249283112, guid: 19c1f6518d31a4af8b3f2f9ae760d66d, type: 2}
+--- !u!114 &1217097570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1217097562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269dd6bd43c434fdd83570c42f58d4b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnTime: 35
+  coin: {fileID: 1581304460073684, guid: 1d352154e54394361a2173db842cf258, type: 2}
 --- !u!1 &1246646003
 GameObject:
   m_ObjectHideFlags: 0

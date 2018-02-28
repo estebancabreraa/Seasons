@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Runtime.CompilerServices;
 
+/** 
+ * Modela comportamiento de objetos que dañan al personaje. 
+ * 
+ * @author Ana Lucia Hernandez (17138). Esteban Cabrera (17781)
+ * 
+ **/
 public class Banana : MonoBehaviour {
 	public float speed = 5f;
 	public float rotSpeed = 5f;
@@ -30,7 +36,7 @@ public class Banana : MonoBehaviour {
 	}
 	public void OnTriggerEnter2D(Collider2D collider)
 	{
-		if (collider.tag == "Fireball") {
+		if (collider.tag == "Fireball") { //si choca con artillería del personaje, que se destruya. 
 			Destroy (this.gameObject);
 			Destroy (collider.gameObject);
 		} 

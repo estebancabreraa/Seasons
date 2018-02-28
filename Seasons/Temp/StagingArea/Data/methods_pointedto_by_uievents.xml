@@ -1,0 +1,14 @@
+<linker>
+	<assembly fullname="Assembly-CSharp">
+		<type fullname="SceneChanger">
+			<method name="OnStartGame"/>
+			<method name="OnStartGame"/>
+			<method name="OnStartGame"/>
+			<method name="OnStartGame"/>
+			<method name="OnStartGame"/>
+			<method name="OnStartGame"/>
+			<method name="OnStartGame"/>
+			<method name="OnStartGame"/>
+		</type>
+	</assembly>
+</linker>
