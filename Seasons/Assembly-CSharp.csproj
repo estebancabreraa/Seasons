@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\GasolineSpawner.cs" />
      <Compile Include="Assets\Scripts\Helicopter.cs" />
+     <Compile Include="Assets\Scripts\Pausa.cs" />
      <Compile Include="Assets\Scripts\SceneChanger.cs" />
      <None Include="Assets\Sprites\Jungle\jungle tileset\jungle tileset.png.txt" />
      <None Include="Assets\Sprites\HUD\hud_spritesheet.xml" />

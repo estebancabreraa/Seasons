@@ -26,8 +26,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Beach.unity
     guid: bc1f5400eec044ba293fbe532b4eb2a9
-  - enabled: 1
-    path: Assets/Scenes/City.unity
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/f1d865bbf416d45528dcadbc6dc66527
     guid: f1d865bbf416d45528dcadbc6dc66527
   - enabled: 1
     path: Assets/Scenes/Desert.unity
@@ -38,8 +38,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Woods.unity
     guid: 5ac162816a2d24eab8d0761007b6f3a2
-  - enabled: 0
-    path: Assets/City.unity
+  - enabled: 1
+    path: Assets/Scenes/City.unity
     guid: 66fdcfd1eadb2164a83916f407a9710c
   - enabled: 0
     path: 
