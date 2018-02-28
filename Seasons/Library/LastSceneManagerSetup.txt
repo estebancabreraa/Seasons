@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Woods.unity
-=======
-- path: Assets/Main Menu.unity
->>>>>>> 322c67b86d1ed23fd4ba0801a4c8637d2f237a57
+- path: Assets/Lava.unity
   isLoaded: 1
   isActive: 1
