@@ -1,4 +1,4 @@
-Android
+iOS
 SceneListBegin?
 Assets/Scenes/Main Menu.unity
 Assets/Scenes/Jungle.unity
